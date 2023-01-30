@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dc098018.css",
+    "main.js": "/static/js/main.99a4ab8d.js",
+    "static/media/skulptura8.jpg": "/static/media/skulptura8.25907bcc3d7bffe0b096.jpg",
+    "static/media/galva7.jpg": "/static/media/galva7.03772cf43e2521895e61.jpg",
+    "static/media/statue.png": "/static/media/statue.bf72a694bec05625234b.png",
+    "static/media/statue2.png": "/static/media/statue2.7db5db4acfc3dd37e2ab.png",
+    "static/media/chebureki54.jpg": "/static/media/chebureki54.c4bd1b0d5b883bce048f.jpg",
+    "static/media/silainiai.png": "/static/media/silainiai.572c08f8afdb569eff29.png",
+    "static/media/logo.png": "/static/media/logo.836443a2ccce4ee2def9.png",
+    "static/media/logo_white.png": "/static/media/logo_white.266218965a94216e6172.png",
+    "static/media/jumbo-text3.png": "/static/media/jumbo-text3.532c91ffa76b48d59672.png",
+    "static/media/phone-call_white.png": "/static/media/phone-call_white.22819ee7943b1190fb1e.png",
+    "static/media/phone-call.png": "/static/media/phone-call.00387604a72df1241c24.png",
+    "index.html": "/index.html",
+    "main.dc098018.css.map": "/static/css/main.dc098018.css.map",
+    "main.99a4ab8d.js.map": "/static/js/main.99a4ab8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc098018.css",
+    "static/js/main.99a4ab8d.js"
+  ]
+}
