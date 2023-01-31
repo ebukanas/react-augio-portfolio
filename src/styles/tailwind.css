@@ -1,0 +1,26 @@
+/* src/styles/tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    max-height: -webkit-fill-available;
+    scroll-behaviour: smooth;
+}
+  
+body {
+    max-height: -webkit-fill-available;
+    scroll-behaviour: smooth;
+}
+
+#hero {
+    position: relative;
+    height: 100svh;
+}
+
+section {
+    position:relative;
+    height: 100dvh;
+}

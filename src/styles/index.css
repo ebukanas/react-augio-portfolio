@@ -1,0 +1,14 @@
+/* src/styles/tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CUSTOM FONTS */
+@layer base {
+    h1, heading, button {
+        font-family: futura;
+        src: url(../fonts/Futura-Bold.ttf);
+    }
+}
+
