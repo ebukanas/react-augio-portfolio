@@ -1,0 +1,13 @@
+
+
+
+header.js
+
+//changeNav should also run on load (now it only runs when you scroll)
+//optimize images for loading
+// window.addEventListener('scroll', changeNav); should also get trigerred when window height 
+one possible semi solution for this:
+https://ishwar-rimal.medium.com/fixing-that-address-bar-issue-in-mobile-browsers-once-and-for-all-8c283fc88e56
+
+another workaround would be to use intersectional observer instead of checking for window.Inner height.
+The intersectional observe could just check when the two components intersect and then trigger the styling changes.

@@ -2,16 +2,23 @@ import '../styles/main.css';
 import '../styles/tailwind.css';
 
 import { useState, useRef, useEffect } from 'react';
+// import logo_Black from '../images/logo.png'
 
+
+//TO DO:
+//changeNav should also run on load (now it only runs when you scroll)
+//optimize images for loading
+// window.addEventListener('scroll', changeNav); should also get trigerred when window height 
 
 const Header = ( {toggleData} ) => {
 
     //this function captures the height of the header. this is then used in the function below
     const headerRef = useRef(null);
-    const [height, setHeight] = useState(null)
+    const [height, setHeight] = useState(null);
     useEffect(() => {
         setHeight(headerRef.current.offsetHeight);
-    }, []);
+        console.log(headerRef.current.offsetHeight);
+    }, [headerRef]);
 
     //used to change the navbar background color, logo color and navbutton color
     const [color, setColor] = useState(false)
@@ -20,7 +27,8 @@ const Header = ( {toggleData} ) => {
     const [mobileNavButton, setmobileNavButton] = useState(false)
     const [mobileNavText, setmobileNavText] = useState(false)
     const changeNav = () => {
-        if (window.scrollY >= (window.innerHeight - (height -1))) {
+        //temporarily setting it to 100 instead of 1 because resize listener doesnt trigger on mobile when the bottom toolbar hides on scroll
+        if (window.scrollY >= (window.innerHeight - (height + 100))) {
             setColor(true);
             setLogo(true);
             setmobileNavButton(true);
@@ -61,34 +69,35 @@ const Header = ( {toggleData} ) => {
     md:h-14 lg:h-[5rem]`}>
         <div className="md:px-0 h-full w-full mx-4 flex justify-between items-center">
             {/* <!-- Medium resolution upwards contact info --> */}
-            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden w-50
+            <ul className={` ${mobileNavText ? 'text-black' : 'text-white'} hidden w-50 text-[0.8em]
             md:flex md:flex-col md:w-[250px]`}>
                 <li className="py-1 flex">
-                    <i className={`bg-${icons ? 'emailBlack' : 'emailWhite'} bg-contain w-4 h-4 mt-[5px]`}></i>
+                    <i className={`${icons ? 'bg-emailBlack' : 'bg-emailWhite'} bg-contain w-3 h-3 mt-[5px]`}></i>
                     <a href="mailto:augustinas.pietaris@gmail.com">
-                        <span className="text-sm mt-1 mx-3 md:text-[0.8em] md:mt-0">augustinas.pietaris@gmail.com</span>
+                        <span className="mt-1 mx-3 md:text-[0.8em] md:mt-0">augustinas.pietaris@gmail.com</span>
                     </a>
                 </li>
                 <li className="py-1 flex md:-mt-2">
-                    <i className={`bg-${icons ? 'phoneBlack' : 'phoneWhite'} bg-contain w-4 h-4 mt-[5px]`}></i>
+                    <i className={`${icons ? 'bg-phoneBlack' : 'bg-phoneWhite'} bg-contain w-3 h-3  mt-[5px]`}></i>
                     <a href="tel:+37068716994">
-                        <span className="text-sm mt-2 mx-3 md:text-[0.8em] md:mt-0">+370 687 169 94</span>
+                        <span className="mt-2 mx-3 md:text-[0.8em] md:mt-0">+370 687 169 94</span>
                     </a>
                 </li>
             </ul>
+            {/*  */}
 
             {/* <!-- Logo Here --> */}
-            <a className={`bg-${logo ? 'logoBlack' : 'logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
+            <a className={`${logo ? 'bg-logoBlack' : 'bg-logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
             md:w-[120px] md:h-[34px]
             lg:w-[170px] lg:h-[55px]`}></a>
 
             {/* <!-- medium resolution and upwards navigation --> */}
-            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden mr-2 md:flex md:w-[250px] md:flex-col md:text-right`}>
+            <ul className={` ${mobileNavText ? 'text-black' : 'text-white'} hidden mr-2 md:flex md:w-[250px] md:flex-col md:text-right`}>
                 <li>
-                    <a className="text-sm" href="">APIE MANE</a>
+                    <a className="text-[0.7em]" href="">APIE MANE</a>
                 </li>
                 <li>
-                    <a className="text-sm" href="workpage.html">MANO DARBAI</a>
+                    <a className="text-[0.7em] relative top-[-6px]" href="workpage.html">MANO DARBAI</a>
                 </li>
             </ul>
 
@@ -125,7 +134,7 @@ const Header = ( {toggleData} ) => {
             </div>
 
         <div className="flex md:hidden items-center z-96">
-            <button className={` text-${mobileNavButton ? 'black' : 'white'} text-4xl font-bold hover:opacity-100 duration-300 mb-3`}
+            <button className={` ${mobileNavButton ? 'text-black' : 'text-white'} text-4xl font-bold hover:opacity-100 duration-300 mb-3`}
                 onClick={() => {toggleData(bodyOverlayValue); toggleMenu()}}>
                 &#9776;
             </button>

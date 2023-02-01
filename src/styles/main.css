@@ -474,6 +474,9 @@ video {
 .relative {
   position: relative;
 }
+.top-\[-6px\] {
+  top: -6px;
+}
 .top-0 {
   top: 0px;
 }
@@ -567,8 +570,8 @@ video {
 .h-full {
   height: 100%;
 }
-.h-4 {
-  height: 1rem;
+.h-3 {
+  height: 0.75rem;
 }
 .h-9 {
   height: 2.25rem;
@@ -591,8 +594,8 @@ video {
 .w-full {
   width: 100%;
 }
-.w-4 {
-  width: 1rem;
+.w-3 {
+  width: 0.75rem;
 }
 .w-36 {
   width: 9rem;
@@ -611,6 +614,9 @@ video {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.resize {
+  resize: both;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -651,6 +657,9 @@ video {
 .border-4 {
   border-width: 4px;
 }
+.border-\[3px\] {
+  border-width: 3px;
+}
 .border-2 {
   border-width: 2px;
 }
@@ -689,14 +698,26 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(57 44 66 / var(--tw-bg-opacity));
 }
-.bg-hero2 {
-  background-image: url('/src/images/statue2.png');
-}
 .bg-emailBlack {
   background-image: url('/src/images/email.png');
 }
+.bg-emailWhite {
+  background-image: url('/src/images/email_white.png');
+}
 .bg-phoneBlack {
   background-image: url('/src/images/phone-call.png');
+}
+.bg-phoneWhite {
+  background-image: url('/src/images/phone-call_white.png');
+}
+.bg-logoBlack {
+  background-image: url('/src/images/logo.png');
+}
+.bg-logoWhite {
+  background-image: url('/src/images/logo_white.png');
+}
+.bg-hero2 {
+  background-image: url('/src/images/statue2.png');
 }
 .bg-\[url\(\'\.\.\/images\/galva7\.jpg\'\)\] {
   background-image: url('../images/galva7.jpg');
@@ -754,9 +775,11 @@ video {
 .font-futura {
   font-family: futura, bold;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.text-\[0\.8em\] {
+  font-size: 0.8em;
+}
+.text-\[0\.7em\] {
+  font-size: 0.7em;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -769,6 +792,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xs {
   font-size: 0.75rem;
@@ -827,12 +854,7 @@ video {
 }
 
 
-html {
-    max-height: -webkit-fill-available;
-    scroll-behaviour: smooth;
-}
-  
-body {
+html, body {
     max-height: -webkit-fill-available;
     scroll-behaviour: smooth;
 }
@@ -845,15 +867,19 @@ body {
 section {
     position:relative;
     height: 100dvh;
-}
 
-#portfolio {
-    display:flex;
-    justify-content:center;
 }
 
 .backdrop\:fixed::backdrop {
   position: fixed;
+}
+
+.last\:col-span-2:last-child {
+  grid-column: span 2 / span 2;
+}
+
+.last\:col-span-1:last-child {
+  grid-column: span 1 / span 1;
 }
 
 .hover\:scale-105:hover {
@@ -866,17 +892,14 @@ section {
   opacity: 1;
 }
 
-@media (min-width: 640px) {
-
-  .sm\:items-center {
-    align-items: center;
-  }
-}
-
 @media (min-width: 768px) {
 
   .md\:relative {
     position: relative;
+  }
+
+  .md\:row-span-2 {
+    grid-row: span 2 / span 2;
   }
 
   .md\:mx-20 {
@@ -920,8 +943,12 @@ section {
     height: 34px;
   }
 
-  .md\:h-full {
-    height: 100%;
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
+  .md\:h-\[60\%\] {
+    height: 60%;
   }
 
   .md\:w-\[250px\] {
@@ -932,12 +959,12 @@ section {
     width: 120px;
   }
 
-  .md\:w-2\/3 {
-    width: 66.666667%;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-52 {
+    width: 13rem;
   }
 
   .md\:grid-cols-\[repeat\(auto-fit\2c _minmax\(0\2c 1fr\)\)\] {
@@ -974,6 +1001,10 @@ section {
     background-size: contain;
   }
 
+  .md\:bg-cover {
+    background-size: cover;
+  }
+
   .md\:bg-left {
     background-position: left;
   }
@@ -1008,12 +1039,16 @@ section {
     font-size: 0.8em;
   }
 
-  .md\:text-\[3em\] {
-    font-size: 3em;
+  .md\:text-\[2em\] {
+    font-size: 2em;
   }
 
-  .md\:text-\[1\.4rem\] {
-    font-size: 1.4rem;
+  .md\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+
+  .md\:last\:col-span-1:last-child {
+    grid-column: span 1 / span 1;
   }
 }
 
@@ -1023,8 +1058,8 @@ section {
     margin-bottom: 3.5rem;
   }
 
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:h-\[5rem\] {
@@ -1051,24 +1086,20 @@ section {
     width: 40%;
   }
 
-  .lg\:w-96 {
-    width: 24rem;
-  }
-
   .lg\:grid-rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
 
-  .lg\:border-4 {
-    border-width: 4px;
+  .lg\:border-\[3px\] {
+    border-width: 3px;
   }
 
-  .lg\:border-t-4 {
-    border-top-width: 4px;
+  .lg\:border-t-\[3px\] {
+    border-top-width: 3px;
   }
 
-  .lg\:text-\[4em\] {
-    font-size: 4em;
+  .lg\:bg-cover {
+    background-size: cover;
   }
 
   .lg\:text-base {
@@ -1083,3 +1114,4 @@ section {
     width: 30%;
   }
 }
+

@@ -54,11 +54,11 @@ const HomePortfolio = () => {
     id="portfolio" 
     className="flex flex-col justify-center">
         <h1 className="h-8 w-screen text-center text-xl mb-4 mt-[40px] font-futura font-bold
-        lg:text-[4em] lg:mb-14 lg:mt-2
-        md:text-[3em] md:mb-10 md:mt-[20px]
+        lg:mb-14 lg:mt-10
+        md:text-[2em] md:mb-10 md:mt-[20px]
         ">PORTFOLIO</h1>
         <div className='font-futura flex justify-around mb-6 text-sm 
-        md:text-[1.4rem] md:justify-center'>
+        md:text-[1rem] md:justify-center'>
             <button 
             onClick={changeToPhysical} 
             className={`${getClassNames(selectedButton, 'physical')} duration-200 md:px-3 md:pb-1`}>APČIUOPIAMI</button>
@@ -68,7 +68,7 @@ const HomePortfolio = () => {
             className={`${getClassNames(selectedButton, 'digital')} duration-200 md:px-3 md:pb-1`}>SKAITMENINIAI</button>
         </div>
             <div className={`h-2/3 w-auto grid grid-rows-2 grid-cols-2 gap-4 mx-4
-            md:mx-20 md:grid-cols-[repeat(auto-fit,_minmax(0,1fr))] md:h-full
+            md:mx-20 md:grid-cols-[repeat(auto-fit,_minmax(0,1fr))] md:grid-rows-auto md:h-[60%]
             lg:h-1/2 lg:grid-rows-1`}>
 
             {
@@ -77,8 +77,6 @@ const HomePortfolio = () => {
             .filter((workItem) => workItem[typeOfWork])
             .map((workItem) => {
                 workItemCounter++;
-                console.log(workItemCounter);
-
             const img = {
                 backgroundImage: 'url(' + workItem.img1 + ')',
             };
@@ -86,9 +84,9 @@ const HomePortfolio = () => {
             return (
                 <div 
                 key={workItem.id} 
-                className={`sm:last:col-span-${gridElementsSpan ? '2' : '1'} cursor-pointer border-2 lg:border-4 border-black flex bg-cover bg-top`}
+                className={`${gridElementsSpan ? 'last:col-span-2' : 'last:col-span-1'} md:last:col-span-1 md:row-span-2 cursor-pointer border-2 lg:border-[3px] border-black flex bg-cover bg-top`}
                 style={img}>
-            <button className="border-t-2 lg:border-t-4 border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
+            <button className="border-t-2 lg:border-t-[3px] border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
             lg:text-base">{workItem.title}</button>
                 </div>
                 
