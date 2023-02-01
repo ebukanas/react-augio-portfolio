@@ -24,3 +24,8 @@ section {
     position:relative;
     height: 100dvh;
 }
+
+#portfolio {
+    display:flex;
+    justify-content:center;
+}

@@ -1,11 +1,17 @@
 import '../styles/main.css';
 import '../styles/tailwind.css';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 
 const Header = ( {toggleData} ) => {
 
+    //this function captures the height of the header. this is then used in the function below
+    const headerRef = useRef(null);
+    const [height, setHeight] = useState(null)
+    useEffect(() => {
+        setHeight(headerRef.current.offsetHeight);
+    }, []);
 
     //used to change the navbar background color, logo color and navbutton color
     const [color, setColor] = useState(false)
@@ -14,7 +20,7 @@ const Header = ( {toggleData} ) => {
     const [mobileNavButton, setmobileNavButton] = useState(false)
     const [mobileNavText, setmobileNavText] = useState(false)
     const changeNav = () => {
-        if (window.scrollY >= (window.innerHeight - 160)) {
+        if (window.scrollY >= (window.innerHeight - (height -1))) {
             setColor(true);
             setLogo(true);
             setmobileNavButton(true);
@@ -50,36 +56,40 @@ const Header = ( {toggleData} ) => {
     
   return (
     <header 
-    className={`${color ? 'bg-white' : 'bg-transparent'} w-full h-16 md:h-20 fixed z-50 flex justify-between lg:h-[7rem] shadow-md duration-150 backdrop-filter backdrop-blur-sm font-futura`}>
+    ref={headerRef}
+    className={`${color ? 'bg-white' : 'bg-transparent'} w-full h-16 fixed z-50 flex justify-between shadow-md duration-150 backdrop-filter backdrop-blur-sm
+    md:h-14 lg:h-[5rem]`}>
         <div className="md:px-0 h-full w-full mx-4 flex justify-between items-center">
             {/* <!-- Medium resolution upwards contact info --> */}
-            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden md:flex md:flex-col w-50 md:w-[250px]`}>
-                <li className="py-2 flex">
-                    <div id="email" className={`bg-contain w-5 h-5 mt-1 bg-${icons ? 'emailBlack' : 'emailWhite'}`} data-email></div>
-                    <a href="mailto:augustinas.pietaris@gmail.com"><span className="mt-1 mx-3 text-sm">augustinas.pietaris@gmail.com</span></a>
+            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden w-50
+            md:flex md:flex-col md:w-[250px]`}>
+                <li className="py-1 flex">
+                    <i className={`bg-${icons ? 'emailBlack' : 'emailWhite'} bg-contain w-4 h-4 mt-[5px]`}></i>
+                    <a href="mailto:augustinas.pietaris@gmail.com">
+                        <span className="text-sm mt-1 mx-3 md:text-[0.8em] md:mt-0">augustinas.pietaris@gmail.com</span>
+                    </a>
                 </li>
-                <li className="py-2 flex md:-mt-2">
-                    <div id="phone" className={`bg-${icons ? 'phoneBlack' : 'phoneWhite'} bg-contain w-5 h-5 mt-1`} data-phone></div>
-                    <a href="tel:+37068716994"><span className="text-sm mt-2 mx-3">+370 687 169 94</span></a>
+                <li className="py-1 flex md:-mt-2">
+                    <i className={`bg-${icons ? 'phoneBlack' : 'phoneWhite'} bg-contain w-4 h-4 mt-[5px]`}></i>
+                    <a href="tel:+37068716994">
+                        <span className="text-sm mt-2 mx-3 md:text-[0.8em] md:mt-0">+370 687 169 94</span>
+                    </a>
                 </li>
             </ul>
 
-{/* <div className='bg-logoBlack h-10 w-10 bg-contain'></div>
-<div className='bg-logoWhite h-10 w-10 bg-contain'></div> */}
-
-{/* <div className='bg-emailWhite h-10 w-10 bg-contain'></div>
-<div className='bg-phoneWhite h-10 w-10 bg-contain'></div> */}
-
-
             {/* <!-- Logo Here --> */}
             <a className={`bg-${logo ? 'logoBlack' : 'logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
-            md:w-[180px] md:h-[54px]
-            lg:w-[270px] lg:h-[80px]`}></a>
+            md:w-[120px] md:h-[34px]
+            lg:w-[170px] lg:h-[55px]`}></a>
 
             {/* <!-- medium resolution and upwards navigation --> */}
-            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden md:flex md:w-[250px] md:flex-col md:text-right `}>
-                <li className="py-2"><a className="text-md" href="">APIE MANE</a></li>
-                <li className=""><a className="text-md" href="workpage.html">MANO DARBAI</a></li>
+            <ul className={` text-${mobileNavText ? 'black' : 'white'} hidden mr-2 md:flex md:w-[250px] md:flex-col md:text-right`}>
+                <li>
+                    <a className="text-sm" href="">APIE MANE</a>
+                </li>
+                <li>
+                    <a className="text-sm" href="workpage.html">MANO DARBAI</a>
+                </li>
             </ul>
 
             {/* <!-- mobile menu links here --> */}
@@ -114,7 +124,6 @@ const Header = ( {toggleData} ) => {
             </ul>
             </div>
 
-{/* this button doesnt work after you toggle once. its not clicking */}
         <div className="flex md:hidden items-center z-96">
             <button className={` text-${mobileNavButton ? 'black' : 'white'} text-4xl font-bold hover:opacity-100 duration-300 mb-3`}
                 onClick={() => {toggleData(bodyOverlayValue); toggleMenu()}}>

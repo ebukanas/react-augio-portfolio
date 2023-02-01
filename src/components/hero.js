@@ -9,11 +9,11 @@ const Hero = () => {
 
     <section 
     id="hero" 
-    className="bg-purple relative bg-[url('../images/statue.png')] bg-cover bg-blend-hard-light flex flex-col justify-evenly
+    className="bg-purple relative bg-[url('../images/galva7.jpg')] md:bg-[url('../images/galva10.jpg')] bg-cover bg-center bg-blend-hard-light flex flex-col justify-evenly
     sm:items-center md:bg-contain md:bg-no-repeat md:bg-left" 
     data-section="bg-purple">
 
-        <img className="sm:w-2/3 md:w-2/3 lg:w-2/5 2xl:w-[30%]" src={jumboText} alt="" />
+        <img className="md:w-2/3 lg:w-2/5 2xl:w-[30%]" src={jumboText} alt="" />
         <a href="workpage.html" 
            className="w-2/3 mb-4 h-20 absolute bottom-5 self-center
            md:w-1/2 md:flex md:justify-center">
