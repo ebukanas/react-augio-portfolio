@@ -6,7 +6,8 @@ import '../styles/main.css';
 import '../styles/tailwind.css';
 import React from 'react';
 
-
+// TO DO:
+//add hover styling
 
 const HomePortfolio = () => {
 

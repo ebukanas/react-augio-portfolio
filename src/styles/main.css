@@ -582,8 +582,8 @@ video {
 .h-20 {
   height: 5rem;
 }
-.h-12 {
-  height: 3rem;
+.h-10 {
+  height: 2.5rem;
 }
 .h-8 {
   height: 2rem;
@@ -648,9 +648,6 @@ video {
 .self-end {
   align-self: flex-end;
 }
-.self-center {
-  align-self: center;
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -697,6 +694,10 @@ video {
 .bg-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(57 44 66 / var(--tw-bg-opacity));
+}
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-emailBlack {
   background-image: url('/src/images/email.png');

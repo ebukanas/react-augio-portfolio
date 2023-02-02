@@ -2,7 +2,7 @@ import '../styles/main.css';
 import '../styles/tailwind.css';
 
 import { useState, useRef, useEffect } from 'react';
-// import logo_Black from '../images/logo.png'
+import { Link } from 'react-router-dom';
 
 
 //TO DO:
@@ -10,7 +10,13 @@ import { useState, useRef, useEffect } from 'react';
 //optimize images for loading
 // window.addEventListener('scroll', changeNav); should also get trigerred when window height 
 
-const Header = ( {toggleData} ) => {
+// for the navbar use intersectional observer and check if bg is white if possible.
+//fix the overflow on the mobile navbar
+//fix the mobile navbar logo to always stay black
+
+// maybe remove the MANO DARBAI link?
+
+const Header = () => {
 
     //this function captures the height of the header. this is then used in the function below
     const headerRef = useRef(null);
@@ -44,21 +50,18 @@ const Header = ( {toggleData} ) => {
     }
     window.addEventListener('scroll', changeNav);
     
-    let bodyOverlayValue = "hidden";
     //used to toggle the menu button on mobile and open up the navigation
     const [state, setState] = useState("hidden");
-    const toggleMenu = (logo) => {
+    const toggleMenu = () => {
         console.log('menu clicked');
         // value when opening the menu
         if (state === 'hidden') {
             setState("w-full h-screen");
             setLogo(true);
-            toggleData('hidden');
         // values when closing the menu
         } else {
             setState('hidden');
             setLogo(false);
-            toggleData('unset');
         }
     }
     
@@ -87,9 +90,12 @@ const Header = ( {toggleData} ) => {
             {/*  */}
 
             {/* <!-- Logo Here --> */}
-            <a className={`${logo ? 'bg-logoBlack' : 'bg-logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
+            <Link className={`${logo ? 'bg-logoBlack' : 'bg-logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
             md:w-[120px] md:h-[34px]
-            lg:w-[170px] lg:h-[55px]`}></a>
+            lg:w-[170px] lg:h-[55px]`} 
+            to={'/'}>
+            </Link>
+            
 
             {/* <!-- medium resolution and upwards navigation --> */}
             <ul className={` ${mobileNavText ? 'text-black' : 'text-white'} hidden mr-2 md:flex md:w-[250px] md:flex-col md:text-right`}>
@@ -97,7 +103,7 @@ const Header = ( {toggleData} ) => {
                     <a className="text-[0.7em]" href="">APIE MANE</a>
                 </li>
                 <li>
-                    <a className="text-[0.7em] relative top-[-6px]" href="workpage.html">MANO DARBAI</a>
+                    <a className="text-[0.7em] relative top-[-6px]">MANO DARBAI</a>
                 </li>
             </ul>
 
@@ -135,7 +141,7 @@ const Header = ( {toggleData} ) => {
 
         <div className="flex md:hidden items-center z-96">
             <button className={` ${mobileNavButton ? 'text-black' : 'text-white'} text-4xl font-bold hover:opacity-100 duration-300 mb-3`}
-                onClick={() => {toggleData(bodyOverlayValue); toggleMenu()}}>
+                onClick={() => {toggleMenu()}}>
                 &#9776;
             </button>
 
