@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ac5132cb.css",
-    "main.js": "/static/js/main.43eb3291.js",
+    "main.css": "/static/css/main.b13ff5ad.css",
+    "main.js": "/static/js/main.17a14abb.js",
     "static/media/statue2.png": "/static/media/statue2.7db5db4acfc3dd37e2ab.png",
     "static/media/galva10.jpg": "/static/media/galva10.460ae79cccab5eb1c507.jpg",
     "static/media/skulptura8.jpg": "/static/media/skulptura8.9fa69a657a317067e387.jpg",
+    "static/media/galva5.jpg": "/static/media/galva5.bb1449963fd1962ad3d4.jpg",
+    "static/media/galva2.jpg": "/static/media/galva2.0f5435ddbbfc529c5c70.jpg",
     "static/media/skulptura1.jpg": "/static/media/skulptura1.1a0d2834cacefb97c5ee.jpg",
     "static/media/galva7.jpg": "/static/media/galva7.aa2a729d0d9ebaac8cd5.jpg",
+    "static/media/galva6.jpg": "/static/media/galva6.40ea56ddf0eb35270c87.jpg",
     "static/media/skulptura4.jpg": "/static/media/skulptura4.12ed435316c3101b93e1.jpg",
     "static/media/chebureki54.jpg": "/static/media/chebureki54.70622001817ecc45130d.jpg",
     "static/media/Kambarys6.jpg": "/static/media/Kambarys6.172f9412455e4df036b2.jpg",
@@ -20,11 +23,11 @@
     "static/media/phone-call_white.png": "/static/media/phone-call_white.22819ee7943b1190fb1e.png",
     "static/media/phone-call.png": "/static/media/phone-call.00387604a72df1241c24.png",
     "index.html": "/index.html",
-    "main.ac5132cb.css.map": "/static/css/main.ac5132cb.css.map",
-    "main.43eb3291.js.map": "/static/js/main.43eb3291.js.map"
+    "main.b13ff5ad.css.map": "/static/css/main.b13ff5ad.css.map",
+    "main.17a14abb.js.map": "/static/js/main.17a14abb.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac5132cb.css",
-    "static/js/main.43eb3291.js"
+    "static/css/main.b13ff5ad.css",
+    "static/js/main.17a14abb.js"
   ]
 }

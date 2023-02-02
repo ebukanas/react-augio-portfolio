@@ -1,4 +1,10 @@
 import kernagis1 from './images/galva7.jpg';
+import kernagis2 from './images/galva2.jpg';
+import kernagis3 from './images/galva5.jpg';
+import kernagis4 from './images/galva6.jpg';
+import kernagis5 from './images/galva10.jpg';
+
+
 import ceburekai1 from './images/chebureki54.jpg';
 import silainiai1 from './images/silainiai.png';
 import skulptura1 from './images/skulptura8.jpg';
@@ -20,9 +26,14 @@ export const Works = [
     {   
         physical: true,
         id:1,
-        url: 'kernagis', 
+        url: 'kernagis',
+        title: 'VYTAUTAS KERNAGIS', 
+        year: 2022,
         img1: kernagis1,
-        title: 'VYTAUTAS KERNAGIS',
+        img2: kernagis2,
+        img3: kernagis3,
+        img4: kernagis4,
+        img5: kernagis5,
     },
     { 
         physical: true,
