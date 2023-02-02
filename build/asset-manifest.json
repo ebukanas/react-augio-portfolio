@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.57ed345e.css",
-    "main.js": "/static/js/main.ee9a596b.js",
+    "main.css": "/static/css/main.ac5132cb.css",
+    "main.js": "/static/js/main.43eb3291.js",
     "static/media/statue2.png": "/static/media/statue2.7db5db4acfc3dd37e2ab.png",
     "static/media/galva10.jpg": "/static/media/galva10.460ae79cccab5eb1c507.jpg",
     "static/media/skulptura8.jpg": "/static/media/skulptura8.9fa69a657a317067e387.jpg",
@@ -20,11 +20,11 @@
     "static/media/phone-call_white.png": "/static/media/phone-call_white.22819ee7943b1190fb1e.png",
     "static/media/phone-call.png": "/static/media/phone-call.00387604a72df1241c24.png",
     "index.html": "/index.html",
-    "main.57ed345e.css.map": "/static/css/main.57ed345e.css.map",
-    "main.ee9a596b.js.map": "/static/js/main.ee9a596b.js.map"
+    "main.ac5132cb.css.map": "/static/css/main.ac5132cb.css.map",
+    "main.43eb3291.js.map": "/static/js/main.43eb3291.js.map"
   },
   "entrypoints": [
-    "static/css/main.57ed345e.css",
-    "static/js/main.ee9a596b.js"
+    "static/css/main.ac5132cb.css",
+    "static/js/main.43eb3291.js"
   ]
 }
