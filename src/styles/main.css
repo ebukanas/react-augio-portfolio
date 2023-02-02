@@ -630,6 +630,9 @@ video {
 .items-center {
   align-items: center;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 .justify-center {
   justify-content: center;
 }
@@ -694,10 +697,6 @@ video {
 .bg-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(57 44 66 / var(--tw-bg-opacity));
-}
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-emailBlack {
   background-image: url('/src/images/email.png');

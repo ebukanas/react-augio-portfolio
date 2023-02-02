@@ -90,11 +90,11 @@ const Header = () => {
             {/*  */}
 
             {/* <!-- Logo Here --> */}
-            <Link className={`${logo ? 'bg-logoBlack' : 'bg-logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
+            <i className={`${logo ? 'bg-logoBlack' : 'bg-logoWhite'} duration-300 h-9 w-36 bg-no-repeat bg-contain z-50
             md:w-[120px] md:h-[34px]
             lg:w-[170px] lg:h-[55px]`} 
             to={'/'}>
-            </Link>
+            </i>
             
 
             {/* <!-- medium resolution and upwards navigation --> */}

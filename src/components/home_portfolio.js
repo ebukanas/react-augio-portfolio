@@ -1,6 +1,7 @@
 // import { useRef } from 'react';
 import { Works } from '../data';
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import '../styles/main.css';
 import '../styles/tailwind.css';
@@ -48,7 +49,11 @@ const HomePortfolio = () => {
         }
       };
 
-      
+      const navigate = useNavigate();
+      const navigateToWorkPage = (url) => {
+        navigate(`/workpage/${url}`);
+      };
+
 
   return (
     <section 
@@ -84,10 +89,11 @@ const HomePortfolio = () => {
 
             return (
                 <div 
-                key={workItem.id} 
+                key={workItem.id}
                 className={`${gridElementsSpan ? 'last:col-span-2' : 'last:col-span-1'} md:last:col-span-1 md:row-span-2 cursor-pointer border-2 lg:border-[3px] border-black flex bg-cover bg-top`}
                 style={img}>
-            <button className="border-t-2 lg:border-t-[3px] border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
+            <button onClick={() => navigateToWorkPage(workItem.url)}
+            className="border-t-2 lg:border-t-[3px] border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
             lg:text-base">{workItem.title}</button>
                 </div>
                 
