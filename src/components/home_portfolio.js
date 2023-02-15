@@ -1,6 +1,6 @@
 // import { useRef } from 'react';
 import { Works } from '../data';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, forwardRef } from 'react';
 import { useNavigate } from "react-router-dom";
 
 import '../styles/main.css';
@@ -10,7 +10,8 @@ import React from 'react';
 // TO DO:
 //add hover styling
 
-const HomePortfolio = () => {
+// Have to use forward ref, because I can't pass the ref directly to the component in home.js
+const HomePortfolio = React.forwardRef((props, ref) => {
 
     // seperated works into two categories: digital and physical.
     // two buttons will trigger whichever ones will be displayed 
@@ -57,6 +58,7 @@ const HomePortfolio = () => {
 
   return (
     <section 
+    ref={ref}
     id="portfolio" 
     className="flex flex-col justify-center">
         <h1 className="h-8 w-screen text-center text-xl mb-4 mt-[40px] font-futura font-bold
@@ -72,7 +74,7 @@ const HomePortfolio = () => {
             <button 
             onClick={changeToDigital} 
             className={`${getClassNames(selectedButton, 'digital')} duration-200 md:px-3 md:pb-1`}>SKAITMENINIAI</button>
-        </div>
+            </div>
             <div className={`h-2/3 w-auto grid grid-rows-2 grid-cols-2 gap-4 mx-4
             md:mx-20 md:grid-cols-[repeat(auto-fit,_minmax(0,1fr))] md:grid-rows-auto md:h-[60%]
             lg:h-1/2 lg:grid-rows-1`}>
@@ -104,5 +106,5 @@ const HomePortfolio = () => {
     </section>
   );
   
-}
+})
 export default HomePortfolio

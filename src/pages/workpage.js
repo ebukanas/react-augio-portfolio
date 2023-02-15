@@ -1,7 +1,6 @@
 import React from "react"
 import { useLocation, useParams } from "react-router-dom";
 import Header from "../components/header"
-import HomePortfolio from "../components/home_portfolio";
 import WorkPreview from "../components/workpreview";
 import { Works } from "../data";
 
@@ -12,7 +11,7 @@ import { Works } from "../data";
 // below it you should still see the entire "home_portfolio" compontent, but it should say "See others" instead of "PORTFOLIO"
 //
 
-const WorkPage = ( ) => {
+const WorkPage = () => {
 
     // captures the current URL as an object
     const IDObject = useParams(useLocation());

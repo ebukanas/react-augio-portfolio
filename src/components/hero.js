@@ -1,7 +1,5 @@
 import '../styles/main.css';
 import '../styles/tailwind.css';
-import { NavLink } from "react-router-dom";
-
 import jumboText from '../images/jumbo-text3.png';
 
 
@@ -23,8 +21,6 @@ const Hero = () => {
            className="w-2/3 h-10 bg-transparent border-[3px] border-white text-white mb-14 font-bold hover:scale-105 duration-200
             md:w-52 md:h-10 lg:w-70">MANO DARBAI</button>
         </a>
-        {/* <NavLink to="/workpage">Workpage </NavLink> */}
-
     </section>
   );
 }
