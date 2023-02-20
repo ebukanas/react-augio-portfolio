@@ -1,18 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.b13ff5ad.css",
-    "main.js": "/static/js/main.17a14abb.js",
+    "main.css": "/static/css/main.47ab03bc.css",
+    "main.js": "/static/js/main.8838a970.js",
     "static/media/statue2.png": "/static/media/statue2.7db5db4acfc3dd37e2ab.png",
     "static/media/galva10.jpg": "/static/media/galva10.460ae79cccab5eb1c507.jpg",
+    "static/media/skulptura9.jpg": "/static/media/skulptura9.d090dc1e2793e458daff.jpg",
+    "static/media/skulptura7.jpg": "/static/media/skulptura7.82bd7cf912cf67af1822.jpg",
+    "static/media/skulptura10.jpg": "/static/media/skulptura10.94a48b6e838904426c1e.jpg",
     "static/media/skulptura8.jpg": "/static/media/skulptura8.9fa69a657a317067e387.jpg",
+    "static/media/chebureki41.jpg": "/static/media/chebureki41.e86ccd2e05cb96117cfd.jpg",
+    "static/media/chebureki55.jpg": "/static/media/chebureki55.8b0001a1a2cf6457c410.jpg",
     "static/media/galva5.jpg": "/static/media/galva5.bb1449963fd1962ad3d4.jpg",
+    "static/media/skulptura3.jpg": "/static/media/skulptura3.849b7fe084cd68fe6ceb.jpg",
     "static/media/galva2.jpg": "/static/media/galva2.0f5435ddbbfc529c5c70.jpg",
     "static/media/skulptura1.jpg": "/static/media/skulptura1.1a0d2834cacefb97c5ee.jpg",
     "static/media/galva7.jpg": "/static/media/galva7.aa2a729d0d9ebaac8cd5.jpg",
     "static/media/galva6.jpg": "/static/media/galva6.40ea56ddf0eb35270c87.jpg",
+    "static/media/chebureki118.jpg": "/static/media/chebureki118.b1aa19cd7204e431781b.jpg",
+    "static/media/chebureki125.jpg": "/static/media/chebureki125.c171c2cd2dfd69316c27.jpg",
+    "static/media/chebureki10.jpg": "/static/media/chebureki10.ef63bd09749b0c79c2ca.jpg",
     "static/media/skulptura4.jpg": "/static/media/skulptura4.12ed435316c3101b93e1.jpg",
+    "static/media/chebureki110.jpg": "/static/media/chebureki110.9f425624ff94a9962194.jpg",
+    "static/media/chebureki126.jpg": "/static/media/chebureki126.398cf260df76555a9a01.jpg",
     "static/media/chebureki54.jpg": "/static/media/chebureki54.70622001817ecc45130d.jpg",
+    "static/media/chebureki59.jpg": "/static/media/chebureki59.ff06ed6c631cf66f7d01.jpg",
+    "static/media/chebureki22.jpg": "/static/media/chebureki22.b3beaac57653f2286ec1.jpg",
     "static/media/Kambarys6.jpg": "/static/media/Kambarys6.172f9412455e4df036b2.jpg",
+    "static/media/chebureki31.jpg": "/static/media/chebureki31.e12d498411245e5ed097.jpg",
+    "static/media/chebureki2.jpg": "/static/media/chebureki2.41d11717453579f8e394.jpg",
     "static/media/Vonia15.jpg": "/static/media/Vonia15.68e12f6aa568a486ed71.jpg",
     "static/media/silainiai.png": "/static/media/silainiai.572c08f8afdb569eff29.png",
     "static/media/skulptura.jpg": "/static/media/skulptura.ddec6b5bd65f69eb6670.jpg",
@@ -23,11 +38,11 @@
     "static/media/phone-call_white.png": "/static/media/phone-call_white.22819ee7943b1190fb1e.png",
     "static/media/phone-call.png": "/static/media/phone-call.00387604a72df1241c24.png",
     "index.html": "/index.html",
-    "main.b13ff5ad.css.map": "/static/css/main.b13ff5ad.css.map",
-    "main.17a14abb.js.map": "/static/js/main.17a14abb.js.map"
+    "main.47ab03bc.css.map": "/static/css/main.47ab03bc.css.map",
+    "main.8838a970.js.map": "/static/js/main.8838a970.js.map"
   },
   "entrypoints": [
-    "static/css/main.b13ff5ad.css",
-    "static/js/main.17a14abb.js"
+    "static/css/main.47ab03bc.css",
+    "static/js/main.8838a970.js"
   ]
 }

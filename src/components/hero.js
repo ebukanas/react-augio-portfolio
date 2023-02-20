@@ -17,9 +17,9 @@ const Hero = () => {
         <a href="workpage.html" 
            className="w-2/3 mb-4 h-20 absolute bottom-5 text-center
            md:w-1/2 md:flex md:justify-center">
-           <button 
+           {/* <button 
            className="w-2/3 h-10 bg-transparent border-[3px] border-white text-white mb-14 font-bold hover:scale-105 duration-200
-            md:w-52 md:h-10 lg:w-70">MANO DARBAI</button>
+            md:w-52 md:h-10 lg:w-70">MANO DARBAI</button> */}
         </a>
     </section>
   );
