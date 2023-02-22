@@ -36,13 +36,14 @@ import kambarys1 from './images/Kambarys6.jpg';
 import vonia1 from './images/Vonia15.jpg';
 
 
-
 export const Works = [
+    
+
     {   
         physical: true,
         id:1,
         url: 'kernagis',
-        title: 'VYTAUTAS KERNAGIS', 
+        title: 'VYTAUTAS KERNAGIS',
         year: 2022,
         img1: kernagis1,
         img2: kernagis2,

@@ -558,6 +558,9 @@ video {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .block {
   display: block;
 }
@@ -791,11 +794,18 @@ video {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .pt-4 {
   padding-top: 1rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+.pt-6 {
+  padding-top: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -998,6 +1008,10 @@ section {
     width: 13rem;
   }
 
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .md\:grid-cols-\[repeat\(auto-fit\2c _minmax\(0\2c 1fr\)\)\] {
     grid-template-columns: repeat(auto-fit, minmax(0,1fr));
   }
@@ -1038,6 +1052,10 @@ section {
 
   .md\:bg-left {
     background-position: left;
+  }
+
+  .md\:bg-center {
+    background-position: center;
   }
 
   .md\:bg-no-repeat {

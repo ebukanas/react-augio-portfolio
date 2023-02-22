@@ -1,7 +1,7 @@
 import { Works } from "../data"
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 
 const WorkPreview = () => {
@@ -43,6 +43,12 @@ useEffect(() => {
 }, [changeToPhysical, changeToDigital, workItemCounter]);
 
 
+const navigate = useNavigate();
+const navigateToWorkPage = (url) => {
+    console.log('test');
+  navigate(`/workpage/${url}`);
+};
+
 // if 3 = 1 rows / 3 cols
 // if 4 = 2 rows / 2 cols
 // if 5 = 3 rows / 2 cols /last span 3
@@ -56,9 +62,9 @@ useEffect(() => {
 
 
   return (
-    <div className="h-auto w-full pb-6">
-    <h1 className="font-futura text-center">Žiūrėti kitus:</h1>
-        <div className="flex justify-evenly font-futura text-[0.7em] mt-2">
+    <div className="h-auto w-full pb-6 pt-6">
+    <h1 className="font-futura text-center">KITI DARBAI</h1>
+        <div className="flex justify-evenly font-futura text-[0.7em] mt-4">
             <button 
             onClick={changeToPhysical} 
             className={`${getClassNames(selectedButton, 'physical')} duration-200 md:px-3 md:pb-1`}>APČIUOPIAMI</button>
@@ -69,20 +75,21 @@ useEffect(() => {
         </div>
 
 {/* try to fix thissssss gridToggler*/}
-        <div className={`${gridToggler ? 'grid-rows-1' : 'grid-rows-2'} ${gridToggler ? 'col-span-1' : 'col-span-2'} grid grid-cols-3 w-full justify-evenly mt-4 gap-2 h-[200px]`}>
+        <div className={`${gridToggler ? 'grid-rows-1' : 'grid-rows-2'} ${gridToggler ? 'col-span-1' : 'col-span-2'} grid grid-cols-3 w-full justify-evenly mt-6 gap-2 h-[200px]`}>
         {Works.
         filter((workItem) => workItem[typeOfWork])
         .map((workItem) => {
         workItemCounter++;
-        console.log(workItemCounter);
         const img = {
             backgroundImage: 'url(' + workItem.img1 + ')',
         };
             return (
                 <div 
-                key={workItem.id} 
+                key={workItem.id}
+                onClick={() => navigateToWorkPage(workItem.url)}
                 style={img} 
-                className={`h-30 bg-cover bg-center border-black border-[2px]`}></div>
+                className={`h-30 bg-cover bg-center border-black border-[2px] cursor-pointer`}>
+                </div>
             )
         })}
         </div>

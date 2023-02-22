@@ -9,7 +9,7 @@ import { Works } from "../data";
 
 // make like a carousel thingie for displaying a single workItem. 
 // below it you should still see the entire "home_portfolio" compontent, but it should say "See others" instead of "PORTFOLIO"
-//
+// when u click on the page you start out in the middle, not the top
 
 const WorkPage = () => {
 
@@ -40,8 +40,8 @@ const WorkPage = () => {
     for (let i = 0; i < imgTotal; i++) {
         img = { backgroundImage: `url(${workItem[`img${i + 1}`]})` };
         images.push(
-            <div style={img} className={`bg-cover bg-top h-full mt-2`} key={i}>
-                <p className="font-helvetica text-[0.7em] p-4 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <div style={img} className={`bg-cover bg-top h-full mt-2 md:bg-center`} key={i}>
+                {/* <p className="font-helvetica text-[0.7em] p-4 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p> */}
             </div>
         );
     }
@@ -58,7 +58,10 @@ const WorkPage = () => {
         <div className="h-2/3 w-full">
             <div className="flex justify-between">
                 <h1 className="font-futura">{workItem.title}</h1>
-                <h2 className="">{workItem.year}</h2>
+                <h2 className="font-futura">{workItem.year}</h2>
+            </div>
+            <div className="py-4">
+                <p className="text-[0.7em] md:w-2/3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             {loopImages(workItem)}
             <div className="pb-6 bottom-0"></div>

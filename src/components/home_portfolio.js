@@ -92,10 +92,10 @@ const HomePortfolio = React.forwardRef((props, ref) => {
             return (
                 <div 
                 key={workItem.id}
-                className={`${gridElementsSpan ? 'last:col-span-2' : 'last:col-span-1'} md:last:col-span-1 md:row-span-2 cursor-pointer border-2 lg:border-[3px] border-black flex bg-cover bg-top`}
+                onClick={() => navigateToWorkPage(workItem.url)}
+                className={`${gridElementsSpan ? 'last:col-span-2' : 'last:col-span-1'} md:last:col-span-1 md:row-span-2 cursor-pointer border-2 lg:border-[3px] border-black flex bg-cover bg-center`}
                 style={img}>
-            <button onClick={() => navigateToWorkPage(workItem.url)}
-            className="border-t-2 lg:border-t-[3px] border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
+            <button className="border-t-2 lg:border-t-[3px] border-black h-8 lg:h-12 w-full font-bold self-end bg-white text-xs 
             lg:text-base">{workItem.title}</button>
                 </div>
                 
